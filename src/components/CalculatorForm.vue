@@ -14,6 +14,7 @@
             class="rounded-lg text-right bg-indigo-50 text-indigo-700 font-bold text-xl w-full p-4 focus:outline-none focus:ring-2 focus:ring-indigo-700"
             v-model="bill"
             data-lpignore="true"
+            pattern="\d*"
           />
         </div>
       </div>
@@ -36,6 +37,7 @@
               class="bg-indigo-50 p-2 rounded w-full h-full focus:outline-none focus:ring-2 focus:ring-indigo-700"
               v-model="tipAmount"
               data-lpignore="true"
+              pattern="\d*"
             />
           </li>
         </ul>
@@ -54,6 +56,7 @@
             class="rounded-lg text-right bg-indigo-50 text-indigo-700 font-bold text-xl w-full p-4 focus:outline-none focus:ring-2 focus:ring-indigo-700"
             v-model="numberOfPeople"
             data-lpignore="true"
+            pattern="\d*"
           />
         </div>
       </div>
