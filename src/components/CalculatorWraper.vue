@@ -7,7 +7,11 @@
       class="bg-white 2xl:p-10 p-0 rounded-xl w-full flex 2xl:flex-row flex-col 2xl:space-x-10 2xl:space-y-0 space-y-4"
     >
       <CalculatorForm v-on:transferData="setAmounts($event)" />
-      <CalculatorResults :totalTipAmount="totalTipAmount" :totalPerPerson="totalPerPerson" />
+      <CalculatorResults
+        :totalTipAmount="totalTipAmount"
+        :totalPerPerson="totalPerPerson"
+        v-on:resetForm="resetForm"
+      />
     </div>
   </div>
 </template>
@@ -31,6 +35,11 @@ export default {
     setAmounts(amounts) {
       this.totalTipAmount = amounts.totalTipAmount;
       this.totalPerPerson = amounts.totalTipAmount + amounts.bill / amounts.numberOfPeople;
+    },
+    resetForm() {
+      this.totalTipAmount = 0;
+      this.totalPerPerson = 0;
+      this.$emit("reset-form");
     },
   },
 };
