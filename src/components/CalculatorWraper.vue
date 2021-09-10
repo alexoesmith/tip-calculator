@@ -1,9 +1,9 @@
 <template>
   <div
-    class="flex items-center justify-center 2xl:h-screen h-auto flex-col 2xl:max-w-[1440px] m-auto max-w-[375px]"
+    class="flex items-center justify-center 2xl:h-screen h-auto flex-col 2xl:max-w-[1440px] m-auto max-w-[375px] p-2"
   >
     <div
-      class="bg-white 2xl:p-10 p-0 rounded-xl w-full flex 2xl:flex-row flex-col 2xl:space-x-10 2xl:space-y-0 space-y-4"
+      class="bg-white 2xl:p-10 p-0 rounded-xl w-full flex 2xl:flex-row flex-col justify-between 2xl:space-x-10 2xl:space-y-0 space-y-4"
     >
       <CalculatorForm v-on:transferData="setAmounts($event)" />
       <CalculatorResults

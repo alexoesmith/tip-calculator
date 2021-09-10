@@ -9,7 +9,7 @@
           <p class="text-indigo-400 text-sm">/ person</p>
         </div>
         <div>
-          <p class="font-bold text-6xl text-indigo-200">
+          <p class="font-bold 2xl:text-6xl text-4xl text-indigo-200">
             £<span v-if="!isNaN(totalTipAmount) && totalTipAmount !== Number.POSITIVE_INFINITY">{{
               totalTipAmount.toFixed(2)
             }}</span>
@@ -23,7 +23,7 @@
           <p class="text-indigo-400 text-sm">/ person</p>
         </div>
         <div>
-          <p class="font-bold text-6xl text-indigo-200">
+          <p class="font-bold 2xl:text-6xl text-4xl text-indigo-200">
             £<span v-if="!isNaN(totalPerPerson) && totalPerPerson !== Number.POSITIVE_INFINITY">{{
               totalPerPerson.toFixed(2)
             }}</span>

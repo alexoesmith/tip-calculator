@@ -1,4 +1,4 @@
-<template v-on:resetForm="resetForm()">
+<template>
   <div class="2xl:p-8 p-6 2xl:w-1/2 w-full">
     <form class="flex flex-col space-y-10" @keyup="handleForm()">
       <div>
