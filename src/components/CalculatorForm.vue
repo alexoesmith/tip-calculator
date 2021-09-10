@@ -11,8 +11,9 @@
             id="bill"
             type="text"
             name="bill"
-            class="rounded-lg text-right bg-indigo-50 text-indigo-700 font-bold text-xl w-full p-4"
+            class="rounded-lg text-right bg-indigo-50 text-indigo-700 font-bold text-xl w-full p-4 focus:outline-none focus:ring-2 focus:ring-indigo-700"
             v-model="bill"
+            data-lpignore="true"
           />
         </div>
       </div>
@@ -34,8 +35,9 @@
             <input
               type="text"
               placeholder="Custom"
-              class="bg-indigo-50 p-2 rounded w-full h-full"
+              class="bg-indigo-50 p-2 rounded w-full h-full focus:outline-none focus:ring-2 focus:ring-indigo-700"
               v-model="tipAmount"
+              data-lpignore="true"
             />
           </li>
         </ul>
@@ -51,8 +53,9 @@
             id="numberOfPeople"
             type="text"
             name="numberOfPeople"
-            class="rounded-lg text-right bg-indigo-50 text-indigo-700 font-bold text-xl w-full p-4"
+            class="rounded-lg text-right bg-indigo-50 text-indigo-700 font-bold text-xl w-full p-4 focus:outline-none focus:ring-2 focus:ring-indigo-700"
             v-model="numberOfPeople"
+            data-lpignore="true"
           />
         </div>
       </div>
