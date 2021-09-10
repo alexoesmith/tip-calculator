@@ -9,12 +9,11 @@
           /></span>
           <input
             id="bill"
-            type="text"
+            type="number"
             name="bill"
             class="rounded-lg text-right bg-indigo-50 text-indigo-700 font-bold text-xl w-full p-4 focus:outline-none focus:ring-2 focus:ring-indigo-700"
             v-model="bill"
             data-lpignore="true"
-            pattern="\d*"
           />
         </div>
       </div>
@@ -32,7 +31,7 @@
           </li>
           <li>
             <input
-              type="text"
+              type="number"
               placeholder="Custom"
               class="bg-indigo-50 p-2 rounded w-full h-full focus:outline-none focus:ring-2 focus:ring-indigo-700"
               v-model="tipAmount"
@@ -51,7 +50,7 @@
           <span class="text-indigo-700 absolute left-4"><font-awesome-icon icon="user"/></span>
           <input
             id="numberOfPeople"
-            type="text"
+            type="number"
             name="numberOfPeople"
             class="rounded-lg text-right bg-indigo-50 text-indigo-700 font-bold text-xl w-full p-4 focus:outline-none focus:ring-2 focus:ring-indigo-700"
             v-model="numberOfPeople"

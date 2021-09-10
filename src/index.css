@@ -13,3 +13,12 @@
 button:disabled {
   @apply bg-indigo-600 text-indigo-400 pointer-events-none;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
