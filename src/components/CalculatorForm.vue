@@ -1,5 +1,5 @@
-<template>
-  <div class="2xl:p-10 p-6 2xl:w-1/2 w-full">
+<template v-on:resetForm="resetForm()">
+  <div class="2xl:p-8 p-6 2xl:w-1/2 w-full">
     <form class="flex flex-col space-y-10" @keyup="handleForm()">
       <div>
         <label for="bill" class="font-semibold text-gray-500 text-xl pb-2 block">Bill</label>
@@ -25,7 +25,7 @@
           <li
             v-for="(tip, index) in tips"
             :key="index"
-            class="bg-indigo-700 text-white p-2 text-center font-bold text-xl rounded"
+            class="bg-indigo-700 text-white py-4 text-center font-bold text-xl rounded cursor-pointer hover:bg-indigo-500"
             @click="handleTip(tip), handleForm()"
           >
             {{ tip }}%
@@ -64,27 +64,34 @@
 export default {
   data() {
     return {
-      bill: 0,
+      bill: null,
       tips: [5, 10, 15, 25, 50],
-      tipAmount: 0,
-      numberOfPeople: 0,
+      tipAmount: null,
+      numberOfPeople: null,
       totalTipAmount: 0,
+      totalAmount: 0,
     };
   },
   methods: {
     handleForm() {
-      // Calculate Amounts
-      let total = (this.bill * this.tipAmount) / this.numberOfPeople;
-      this.totalTipAmount = total / 100;
+      this.totalTipAmount = (this.bill * this.tipAmount) / this.numberOfPeople / 100;
+      this.totalAmount = this.totalTipAmount + this.bill / this.numberOfPeople;
       this.$emit("transferData", {
         totalTipAmount: this.totalTipAmount,
-        numberOfPeople: this.numberOfPeople,
+        totalAmount: this.totalAmount,
         bill: this.bill,
       });
     },
     handleTip(tip) {
       this.tipAmount = tip;
     },
+  },
+  mounted() {
+    this.emitter.on("resetForm", () => {
+      this.bill = null;
+      this.numberOfPeople = null;
+      this.tipAmount = null;
+    });
   },
 };
 </script>

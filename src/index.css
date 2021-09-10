@@ -9,3 +9,7 @@
     @apply bg-indigo-100 font-body;
   }
 }
+
+button:disabled {
+  @apply bg-indigo-600 text-indigo-400 pointer-events-none;
+}

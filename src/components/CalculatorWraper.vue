@@ -2,7 +2,6 @@
   <div
     class="flex items-center justify-center 2xl:h-screen py-20 h-auto flex-col 2xl:max-w-[1440px] m-auto max-w-[375px]"
   >
-    <slot name="logo"></slot>
     <div
       class="bg-white 2xl:p-10 p-0 rounded-xl w-full flex 2xl:flex-row flex-col 2xl:space-x-10 2xl:space-y-0 space-y-4"
     >
@@ -34,12 +33,11 @@ export default {
   methods: {
     setAmounts(amounts) {
       this.totalTipAmount = amounts.totalTipAmount;
-      this.totalPerPerson = amounts.totalTipAmount + amounts.bill / amounts.numberOfPeople;
+      this.totalPerPerson = amounts.totalAmount;
     },
     resetForm() {
       this.totalTipAmount = 0;
       this.totalPerPerson = 0;
-      this.$emit("reset-form");
     },
   },
 };

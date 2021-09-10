@@ -1,6 +1,5 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import router from "./router";
 import store from "./store";
 import "./index.css";
 
@@ -11,8 +10,10 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 library.add(faPoundSign, faUser);
 
-createApp(App)
-  .use(store)
-  .use(router)
-  .component("font-awesome-icon", FontAwesomeIcon)
-  .mount("#app");
+import mitt from "mitt";
+const emitter = mitt();
+const app = createApp(App);
+app.config.globalProperties.emitter = emitter;
+app.use(store);
+app.component("font-awesome-icon", FontAwesomeIcon);
+app.mount("#app");
