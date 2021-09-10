@@ -33,11 +33,11 @@
       </div>
     </div>
     <button
-      class="w-full bg-indigo-200 text-indigo-600 uppercase rounded shadow py-4 2xl:text-4xl text-2xl font-bold hover:bg-indigo-100"
+      class="w-full bg-indigo-200 text-indigo-600 uppercase rounded shadow py-4 tracking-wider text-2xl font-bold hover:bg-indigo-100"
       @click="resetForm"
       :disabled="totalTipAmount == 0"
     >
-      Reset
+      <font-awesome-icon icon="undo" /> Reset
     </button>
   </div>
 </template>

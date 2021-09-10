@@ -6,9 +6,10 @@ import "./index.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faPoundSign } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUndo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faPoundSign, faUser);
+library.add(faPoundSign, faUser, faUndo);
 
 import mitt from "mitt";
 const emitter = mitt();

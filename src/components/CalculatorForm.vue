@@ -19,9 +19,7 @@
       </div>
 
       <div>
-        <label for="bill" class="font-semibold text-gray-500 text-xl pb-2 block"
-          >Select Tip %
-        </label>
+        <label for="bill" class="font-semibold text-gray-500 text-xl pb-2 block">Tip % </label>
         <ul class="grid grid-cols-3 gap-4">
           <li
             v-for="(tip, index) in tips"
